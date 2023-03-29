@@ -1,4 +1,12 @@
 import { defineConfig } from "vite";
-import { createHtmlPlugin } from "vite-plugin-html";
 
-export default defineConfig({});
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: "./index.html",
+        darkPage: "./darkPage.html",
+      },
+    },
+  },
+});
