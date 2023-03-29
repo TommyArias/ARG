@@ -33,32 +33,36 @@ h1{
     display: flex;
     justify-content: center;
     width: 30vw;
-    height: 10vh;
+    height: 3vh;
     text-align: center;
+    z-index: 1;
 }
 
 .activités{
     display: flex;
     justify-content: center;
     width: 30vw;
-    height: 10vh;
+    height: 3vh;
     text-align: center;
+    z-index: 1;
 }
 
 .propos{
     display: flex;
     justify-content: center;
     width: 30vw;
-    height: 10vh;
+    height: 3vh;
     text-align: center;
+    z-index: 1;
 }
 
 .conexion{
     display: flex;
     justify-content: center;
     width: 30vw;
-    height: 10vh;
+    height: 3vh;
     text-align: center;
+    z-index: 1;
 }
 
 .logoandline{
@@ -218,8 +222,8 @@ font-size: 35px;
     position: absolute;
     top: 2080px;
     left: 150px;
-    width: 550px;
-    height: 550px;
+    width: 600px;
+    height: 600px;
 }
 
 @keyframes fadein {
@@ -275,4 +279,8 @@ font-size: 35px;
     width: 100px;
     height: 100px;
     top: 1000px;
+}
+
+a{
+    color: white;
 }
