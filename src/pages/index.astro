@@ -2,6 +2,9 @@
 import logo from "../assets/logo.png";
 import adn from "../assets/adn.mp4";
 import overlay from "../assets/overlay.svg";
+import microscope from "../assets/microscope.png";
+import Footer from "../components/footer.astro";
+import Navbar from "../components/navbar.astro";
 ---
 
 <html lang="fr">
@@ -13,38 +16,20 @@ import overlay from "../assets/overlay.svg";
     <title>E-lucidum</title>
   </head>
   <body class="overflow-x-hidden">
-    <nav
-      class="bg-black text-white flex justify-between items-center p-4 border-b-8 border-b-red-600 relative lg:px-8 h-28"
-    >
-      <div
-        class="z-10 absolute bottom-[-30px] w-screen flex items-center justify-center left-0"
-      >
-        <img
-          src={logo.src}
-          height="60px"
-          width="60px"
-          class="origin-center animate-spin-slow"
-        />
-      </div>
-      <a>ACCEUIL</a>
-      <a>ACTIVITES</a>
-      <a>A PROPOS</a>
-      <a>NOUS CONTACTER</a>
-    </nav>
-
+    <Navbar />
     <div class="relative w-screen overflow-hidden">
       <video src={adn} autoplay muted loop class="w-full origin-center"></video>
       <img src={overlay.src} alt="" class="absolute left-0 top-0 w-screen" />
     </div>
 
-    <section class="my-16 mx-4 relative">
+    <section class="my-16 mx-16 relative">
       <h1
-        class="text-3xl my-4 text-red-600 font-bold underline underline-offset-4"
+        class="text-3xl my-4 text-red-600 font-bold underline underline-offset-4 text-center md:text-left"
       >
         Activites
       </h1>
-      <div class="flex">
-        <p>
+      <div class="flex space-x-8 flex-col-reverse md:flex-row items-center">
+        <p class="text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
           quasi animi inventore eligendi placeat voluptate dolor voluptatibus
           numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
@@ -53,15 +38,18 @@ import overlay from "../assets/overlay.svg";
           dolorem commodi eaque, tempora voluptas fugit, esse incidunt nihil
           doloribus quam. Perferendis corrupti nemo id sit.
         </p>
-        <div class="h-96 bg-red-600 aspect-square"></div>
+        <div class="h-44 bg-red-600 aspect-square my-8"></div>
       </div>
     </section>
 
     <section
-      class="after:content-[''] after:bg-red-600 after:absolute after:z-[-1] after:inset-0 relative after:skew-y-2"
+      class="relative after:content-[''] after:bg-red-600 after:absolute after:z-[-1] after:inset-0 after:skew-y-[-2deg] after:border-y-8 after:border-gray-900"
     >
-      <div class="py-16">
-        <p>
+      <div class="py-20 px-32 flex flex-col md:flex-row items-center">
+        <div>
+          <img src={microscope.src} alt="microscope" class="h-32" />
+        </div>
+        <p class="text-white text-lg flex-1 w-full text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
           quasi animi inventore eligendi placeat voluptate dolor voluptatibus
           numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
@@ -72,5 +60,16 @@ import overlay from "../assets/overlay.svg";
         </p>
       </div>
     </section>
+    <p class="text-lg flex-1 w-full text-justify my-16 mx-16">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
+      quasi animi inventore eligendi placeat voluptate dolor voluptatibus
+      numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
+      consectetur eaque accusantium. Lorem ipsum dolor, sit amet consectetur
+      adipisicing elit. Nobis quasi quisquam minima accusamus molestias dolorem
+      commodi eaque, tempora voluptas fugit, esse incidunt nihil doloribus quam.
+      Perferendis corrupti nemo id sit.
+    </p>
   </body>
+
+  <Footer />
 </html>
