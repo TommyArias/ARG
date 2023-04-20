@@ -1,0 +1,76 @@
+---
+import logo from "../assets/logo.png";
+import adn from "../assets/adn.mp4";
+import overlay from "../assets/overlay.svg";
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>E-lucidum</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <nav
+      class="bg-black text-white flex justify-between items-center p-4 border-b-8 border-b-red-600 relative lg:px-8 h-28"
+    >
+      <div
+        class="z-10 absolute bottom-[-30px] w-screen flex items-center justify-center left-0"
+      >
+        <img
+          src={logo.src}
+          height="60px"
+          width="60px"
+          class="origin-center animate-spin-slow"
+        />
+      </div>
+      <a>ACCEUIL</a>
+      <a>ACTIVITES</a>
+      <a>A PROPOS</a>
+      <a>NOUS CONTACTER</a>
+    </nav>
+
+    <div class="relative w-screen overflow-hidden">
+      <video src={adn} autoplay muted loop class="w-full origin-center"></video>
+      <img src={overlay.src} alt="" class="absolute left-0 top-0 w-screen" />
+    </div>
+
+    <section class="my-16 mx-4 relative">
+      <h1
+        class="text-3xl my-4 text-red-600 font-bold underline underline-offset-4"
+      >
+        Activites
+      </h1>
+      <div class="flex">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
+          quasi animi inventore eligendi placeat voluptate dolor voluptatibus
+          numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
+          consectetur eaque accusantium. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Nobis quasi quisquam minima accusamus molestias
+          dolorem commodi eaque, tempora voluptas fugit, esse incidunt nihil
+          doloribus quam. Perferendis corrupti nemo id sit.
+        </p>
+        <div class="h-96 bg-red-600 aspect-square"></div>
+      </div>
+    </section>
+
+    <section
+      class="after:content-[''] after:bg-red-600 after:absolute after:z-[-1] after:inset-0 relative after:skew-y-2"
+    >
+      <div class="py-16">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
+          quasi animi inventore eligendi placeat voluptate dolor voluptatibus
+          numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
+          consectetur eaque accusantium. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Nobis quasi quisquam minima accusamus molestias
+          dolorem commodi eaque, tempora voluptas fugit, esse incidunt nihil
+          doloribus quam. Perferendis corrupti nemo id sit.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
