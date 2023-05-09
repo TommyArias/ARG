@@ -1,5 +1,4 @@
 ---
-import logo from "../assets/logo.png";
 import adn from "../assets/adn.mp4";
 import overlay from "../assets/overlay.svg";
 import microscope from "../assets/microscope.png";
@@ -20,6 +19,11 @@ import Navbar from "../components/navbar.astro";
     <div class="relative w-screen overflow-hidden">
       <video src={adn} autoplay muted loop class="w-full origin-center"></video>
       <img src={overlay.src} alt="" class="absolute left-0 top-0 w-screen" />
+      <div
+        class="flex items-center justify-center w-full h-full absolute z-10 top-0 left-0"
+      >
+        <h1 class="text-white text-4xl font-bold">E LUCIDUM</h1>
+      </div>
     </div>
 
     <section class="my-16 mx-16 relative">
@@ -28,7 +32,7 @@ import Navbar from "../components/navbar.astro";
       >
         Activites
       </h1>
-      <div class="flex space-x-8 flex-col-reverse md:flex-row items-center">
+      <div class="flex md:space-x-8 flex-col-reverse md:flex-row items-center">
         <p class="text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
           quasi animi inventore eligendi placeat voluptate dolor voluptatibus
@@ -60,7 +64,7 @@ import Navbar from "../components/navbar.astro";
         </p>
       </div>
     </section>
-    <p class="text-lg flex-1 w-full text-justify my-16 mx-16">
+    <p class="text-lg flex-1 text-justify my-16 mx-16">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
       quasi animi inventore eligendi placeat voluptate dolor voluptatibus
       numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
