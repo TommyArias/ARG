@@ -1,0 +1,20 @@
+---
+import File from "../components/file.astro";
+import Navbar from "../components/navbar.astro";
+---
+
+<body class="bg-black">
+  <Navbar />
+  <h1 class="text-white text-4xl my-8 mx-8">Fichiers</h1>
+  <div class="grid grid-cols-3 gap-8 mx-8">
+    <File name="test" link="test.pdf" />
+    <File name="test2" link="test.pdf" />
+    <File name="test3" link="test.jpeg" />
+    <File name="test4" link="test.xsls" />
+    <File name="test5" link="test.pdf" />
+    <File name="test6" link="test.pdf" />
+    <File name="test7" link="test.pdf" />
+    <File name="test8" link="test.pdf" />
+    <File name="test9" link="test.pdf" />
+  </div>
+</body>
