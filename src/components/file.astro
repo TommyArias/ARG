@@ -1,0 +1,18 @@
+---
+const { link, name } = Astro.props;
+const extention = link.split(".").pop();
+---
+
+<a href={link}>
+  <div
+    class="bg-gray-700 text-white h-32 p-4 flex flex-col hover:scale-105 transition-transform ease-in-out"
+  >
+    <h1 class="text-2xl capitalize">
+      {name}
+    </h1>
+    <div class="flex-1"></div>
+    <p class="text-sm text-right">
+      {extention}
+    </p>
+  </div>
+</a>

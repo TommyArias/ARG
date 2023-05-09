@@ -1,0 +1,22 @@
+---
+import logo from "../assets/logo.png";
+---
+
+<nav
+  class="bg-black text-white flex justify-between items-center p-5 border-b-8 border-b-red-600 relative lg:px-8 h-28"
+>
+  <div
+    class="z-10 absolute bottom-[-30px] w-screen flex items-center justify-center left-0"
+  >
+    <img
+      src={logo.src}
+      height="59px"
+      width="59px"
+      class="origin-center animate-spin-slow"
+    />
+  </div>
+  <a href="/" class="cursor-pointer">ACCEUIL</a>
+  <a href="/activite" class="cursor-pointer">ACTIVITES</a>
+  <a href="/a_propos" class="cursor-pointer">A PROPOS</a>
+  <a href="/contact" class="cursor-pointer">NOUS CONTACTER</a>
+</nav>

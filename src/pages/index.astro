@@ -1,0 +1,79 @@
+---
+import adn from "../assets/adn.mp4";
+import overlay from "../assets/overlay.svg";
+import microscope from "../assets/microscope.png";
+import Footer from "../components/footer.astro";
+import Navbar from "../components/navbar.astro";
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>E-lucidum</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <Navbar />
+    <div class="relative w-screen overflow-hidden">
+      <video src={adn} autoplay muted loop class="w-full origin-center"></video>
+      <img src={overlay.src} alt="" class="absolute left-0 top-0 w-screen" />
+      <div
+        class="flex items-center justify-center w-full h-full absolute z-10 top-0 left-0"
+      >
+        <h1 class="text-white text-4xl font-bold">E LUCIDUM</h1>
+      </div>
+    </div>
+
+    <section class="my-16 mx-11 md:mx-16 relative">
+      <h1
+        class="text-3xl my-4 text-red-600 font-bold underline underline-offset-4 text-center md:text-left"
+      >
+        Activites
+      </h1>
+      <div class="flex md:space-x-8 flex-col-reverse md:flex-row items-center">
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
+          quasi animi inventore eligendi placeat voluptate dolor voluptatibus
+          numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
+          consectetur eaque accusantium. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Nobis quasi quisquam minima accusamus molestias
+          dolorem commodi eaque, tempora voluptas fugit, esse incidunt nihil
+          doloribus quam. Perferendis corrupti nemo id sit.
+        </p>
+        <div class="h-44 bg-red-600 aspect-square my-8"></div>
+      </div>
+    </section>
+
+    <section
+      class="relative after:content-[''] after:bg-red-600 after:absolute after:z-[-1] after:inset-0 after:skew-y-[-2deg] after:border-y-8 after:border-gray-900"
+    >
+      <div class="py-20 px-11 md:px-32 flex flex-col md:flex-row items-center">
+        <div>
+          <img src={microscope.src} alt="microscope" class="h-32" />
+        </div>
+        <p class="text-white text-lg flex-1 w-full text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
+          quasi animi inventore eligendi placeat voluptate dolor voluptatibus
+          numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
+          consectetur eaque accusantium. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Nobis quasi quisquam minima accusamus molestias
+          dolorem commodi eaque, tempora voluptas fugit, esse incidunt nihil
+          doloribus quam. Perferendis corrupti nemo id sit.
+        </p>
+      </div>
+    </section>
+    <p class="text-lg flex-1 text-justify my-16 mx-11 md:mx-16">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam modi
+      quasi animi inventore eligendi placeat voluptate dolor voluptatibus
+      numquam ab minus explicabo, deserunt fuga possimus. Repudiandae
+      consectetur eaque accusantium. Lorem ipsum dolor, sit amet consectetur
+      adipisicing elit. Nobis quasi quisquam minima accusamus molestias dolorem
+      commodi eaque, tempora voluptas fugit, esse incidunt nihil doloribus quam.
+      Perferendis corrupti nemo id sit.
+    </p>
+  </body>
+
+  <Footer />
+</html>
